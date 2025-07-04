@@ -1,7 +1,18 @@
+/* === GLOBAL RESET === */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
 /* === PAGE WRAPPER === */
 .bill {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
@@ -9,7 +20,9 @@
   padding: 3rem 2rem;
   background: linear-gradient(135deg, #fdfbfb, #ebedee);
   min-height: 100vh;
+  width: 100%;
   box-sizing: border-box;
+  overflow: visible;
 }
 
 /* === HEADER === */
@@ -22,6 +35,7 @@
   text-align: center;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
 }
 
 /* === LEFT SECTION === */
@@ -42,6 +56,8 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* === TABLE WRAPPER === */
@@ -51,13 +67,15 @@
   border-radius: 8px;
   background-color: #f9f9f9;
   padding: 1rem;
+  width: 100%;
 }
 
 .table {
   border-collapse: collapse;
   width: 100%;
-  text-align: center;
   min-width: 600px;
+  text-align: center;
+  font-size: 1rem;
 }
 
 .table th, .table td {
@@ -71,6 +89,7 @@
   font-weight: 600;
 }
 
+/* === TOTAL AMOUNT === */
 .amt {
   font-size: 1.5rem;
   text-align: right;
@@ -89,6 +108,7 @@
   gap: 2rem;
   width: 100%;
   max-width: 400px;
+  box-sizing: border-box;
 }
 
 /* === FORM STYLING === */
@@ -107,7 +127,6 @@
   border: 1px solid #ccc;
   border-radius: 6px;
   width: 100%;
-  max-width: 250px;
   font-size: 1rem;
 }
 
@@ -129,7 +148,7 @@
   transition: background-color 0.3s ease, transform 0.2s ease;
   display: inline-block;
   font-weight: 600;
-  margin: 15px;
+  margin-top: 10px;
 }
 
 .button:hover, .link1:hover {
@@ -140,10 +159,10 @@
 
 .link1 {
   text-align: center;
-  margin-top: 0.5rem;
+  display: block;
 }
 
-/* === LOADER === */
+/* === LOADING COMPONENT === */
 .loadingComp {
   display: flex;
   justify-content: center;
@@ -152,7 +171,7 @@
   background: linear-gradient(135deg, #fdfbfb, #ebedee);
 }
 
-/* === RESPONSIVE === */
+/* === RESPONSIVE DESIGN === */
 @media (max-width: 1024px) {
   .bill {
     flex-direction: column;
@@ -161,7 +180,8 @@
   }
 
   .div1, .div2 {
-    width: 95%;
+    width: 100%;
+    max-width: 95%;
   }
 
   .table {
@@ -172,11 +192,16 @@
 @media (max-width: 600px) {
   .p {
     font-size: 2rem;
-    padding: 0.8rem;
+    padding: 1rem;
   }
 
   .items, .div2 {
     padding: 1.5rem;
+  }
+
+  .tc {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .table {
