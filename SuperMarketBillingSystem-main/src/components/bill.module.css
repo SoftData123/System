@@ -1,0 +1,200 @@
+/* === PAGE WRAPPER === */
+.bill {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* === HEADER === */
+.p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* === LEFT SECTION === */
+.div1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* === TABLE CARD === */
+.items {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* === TABLE WRAPPER === */
+.tc {
+  overflow-x: auto;
+  max-height: 400px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  padding: 1rem;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  min-width: 600px;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+}
+
+.table th {
+  background-color: #667eea;
+  color: white;
+  font-weight: 600;
+}
+
+.amt {
+  font-size: 1.5rem;
+  text-align: right;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* === RIGHT SECTION === */
+.div2 {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* === FORM STYLING === */
+.addItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.addItem label {
+  font-weight: 600;
+}
+
+.addItem input[type="number"] {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 250px;
+  font-size: 1rem;
+}
+
+.addItem table td {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.4rem 0.5rem;
+}
+
+/* === BUTTONS === */
+.button, .link1 {
+  background: #667eea;
+  color: #fff;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  font-weight: 600;
+  margin: 15px;
+}
+
+.button:hover, .link1:hover {
+  background-color: #5a67d8;
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.link1 {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* === LOADER === */
+.loadingComp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .bill {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .div1, .div2 {
+    width: 95%;
+  }
+
+  .table {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .p {
+    font-size: 2rem;
+    padding: 0.8rem;
+  }
+
+  .items, .div2 {
+    padding: 1.5rem;
+  }
+
+  .table {
+    font-size: 0.85rem;
+    min-width: 500px;
+  }
+
+  .amt {
+    font-size: 1.2rem;
+  }
+
+  .button, .link1 {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+
+  .addItem input[type="number"] {
+    width: 100%;
+  }
+}

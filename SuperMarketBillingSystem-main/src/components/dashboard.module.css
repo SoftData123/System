@@ -1,0 +1,56 @@
+/* container centers content and adds subtle background */
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f9fafc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+/* card style matches login/register with white bg and shadow */
+.card {
+  background-color: white;
+  max-width: 380px;
+  width: 100%;
+  padding: 30px 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* main heading with consistent styling */
+.title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 700;
+}
+
+/* subtitle text */
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+/* button styled like login/register buttons */
+.logoutBtn {
+  background-color: #6c63ff;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 0;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 12px rgba(108, 99, 255, 0.3);
+}
+
+.logoutBtn:hover {
+  background-color: #574bff;
+}

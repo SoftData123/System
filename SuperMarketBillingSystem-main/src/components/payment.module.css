@@ -1,0 +1,174 @@
+/* === PAGE LAYOUT === */
+.payment {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(to right, #f8f9fa, #e8f0fe);
+  box-sizing: border-box;
+}
+
+/* === BILL SECTION === */
+.bill {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+
+.billList {
+  width: 100%;
+  max-height: 500px;
+  overflow-x: auto;
+  overflow-y: auto;
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* === TABLE === */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  min-width: 600px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.table th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+}
+
+/* === DETAILS SECTION === */
+.details {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.details div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input,
+select {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* === BUTTONS === */
+.button,
+.link2 {
+  width: 100%;
+  max-width: 200px;
+  padding: 0.75rem 1rem;
+  background-color: #667eea;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.button:hover,
+.link2:hover {
+  background-color: #5a67d8;
+  cursor: pointer;
+  transform: translateY(-1px);
+}
+
+/* === "Paid" Link === */
+.link2 {
+  display: block;
+  text-align: center;
+}
+
+/* === AMOUNT STYLING === */
+.finalpay {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff735c;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* === LOADING === */
+.loadingComp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f4f6f8;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .payment {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+  }
+
+  .bill,
+  .details {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .table {
+    font-size: 0.85rem;
+    min-width: 100%;
+  }
+
+  .finalpay {
+    font-size: 1.3rem;
+  }
+}
